@@ -1,0 +1,61 @@
+
+
+<% include ../partials/header %>
+
+
+
+
+
+<div class="container">
+<header class="jumbotron">
+    <div class="container">
+    <h1> Weclome To The Possible Options For Donations</h1>
+        <p>Since graduating I have released how hard it is to get a job.Everyone wants an individual to have exprience, but how
+        is someone suppose to gain exprience when nobody is willing to give the individual a chance to pro himself. So to tell
+        tell you a little about myself I will start by introducing myself. My name is Bruno Salapic and I am 24 years old. I recently
+        graduated From Wilfrid Laurier University with a Bachelors or Science in Computer Science. Alot of jobs dont care for education 
+        it seems and all they really care about is this thing called "experience". While trying to expand my knowledge in topics such 
+        as Javascript and push towards being a Full Stack Developer i released that my equipment is failing me. The picture below is of
+        my current chair for my Desktop and its been through alot over the years and recently my brother decided to break it cause hes thick.
+        </p>
+        
+        <img></img>
+        
+        <p>I have been trying to make this website to collect donations if you would love to contribute to my health by helping me purchase 
+        a new chair so that I may have better posture and not kill myself of this terrible chair. I feel like im gonna get impaled up the arse
+        buy the cylinder under the chair because the seat is soo worn out</p>
+        
+        <p>I just wanna give a shoutout to tyler1  for being the only person who i know who has more perma banned accounts then me!(I have 11 permas). 
+        Me and tyler1 are not the problem but in fact the soft skinned pampered babies society now raises.</p>
+        
+        <p>
+             <a href="/index/new" class="btn btn-primary btn-large"> add a new campground</a></p>
+             </div>
+</header>
+
+<div class='row'>
+    
+    <% data.forEach(function(data){ %>
+    
+    <div class='col-md-4 col-sm-6'>
+        <div class="thumbnail">
+        <img src="<%= data.img %>" width="350" height="130"></img>    
+        
+         <div class="caption">
+            <h4><%= data.partname %></h4>
+            <p>
+                <a href="/index/<%=data._id%>" class="btn btn-primary">More Info</a>
+            </p>
+        </div>
+        </div>
+       
+         
+        
+    </div>
+
+<% }); %>
+
+</div>
+</div>
+
+<% include ../partials/footer %>
